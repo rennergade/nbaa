@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}" type="text/css">
+
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/jquery.hoverscroll.css') }}" type="text/css">
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+
+        <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.hoverscroll.js') }}"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+              // Override default parameters onload
+              $.fn.hoverscroll.params = $.extend($.fn.hoverscroll.params, {
+                height: 100,
+                width: screen.width,
+                arrows: false
+              });
+
+              // Generate hoverscroll with overridden default parameters
+              $('#my-list').hoverscroll();
+                        });
+
+
+        </script>
+
+    </head>
+    <body>
+
+      <header>
+          <div class="container" width="100%">
+              <div class="row">
+                  <div class="col-md-4">
+                <a href="/#">    <img src="/static/assetslogosmall.png"></a>
+                  </div>
+                  <div class="col-md-4" text-center>
+                <a href="/#">    <h1 align="center">NBA ASSETS</h1> </a>
+                  </div>
+                  <div class="col-md-4" style="height:101px; padding-top:30px; padding-left: 5%; font-size: 22px;">
+                    <table>
+                      <tr>
+                    <td style="padding-left:10px; padding-right: 10px;">  <a href="/#">Top 100</a></td>
+                    <td style="padding-left:10px; padding-right: 10px;">    <div class="dropdown">
+                    <a href="/#">    <button class="dropbtn">Teams</button>  </a>
+
+                          <div class="dropdown-content">
+                            <table style="font-size: 16px; text-align: left; width: 600px">
+                              <tr style="text-align: center; font-size:22px; text-decoration: underline;"><td style="color:blue">Eastern Conference</td> <td style="color:red">Western Conference</td></tr>
+                              <tr style="text-align: center;"><td>Atlantic Division</td> <td>Southwest Division</td></tr>
+                              <tr><td><li><a href="/BOS"> Boston Celtics</a></li></td> <td><li><a href="/DAL"> Dallas Mavericks</a></li></td></tr>
+                              <tr><td><li><a href="/BRK"> Brooklyn Nets</a></li></td> <td><li><a href="/HOU"> Houston Rockets</a></li></td></tr>
+                              <tr><td><li><a href="/NYK"> New York Knicks</a></li></td> <td><li><a href="/MEM"> Memphis Grizzlies</a></li></td></tr>
+                              <tr><td><li><a href="/PHL"> Philadelphia 76ers</a></li></td> <td><li><a href="/NOP"> New Orleans Pelicans</a></li></td></tr>
+                              <tr><td><li><a href="/TOR"> Toronto Raptors</a></li></td> <td><li><a href="/SAS"> San Antonio Spurs</a></li></td></tr>
+                              <tr style="text-align: center;"><td>Central Division</td><td> Pacific Division</td></tr>
+                              <tr><td><li><a href="/CHI"> Chicago Bulls</a></li></td> <td><li><a href="/GSW"> Golden State Warriors</a></li></td></tr>
+                              <tr><td><li><a href="/CLE"> Cleveland Cavaliers</a></li></td> <td><li><a href="/LAL"> Los Angeles Lakers</a></li></td></tr>
+                              <tr><td><li><a href="/DET"> Detroit Pistons</a></li></td> <td><li><a href="/LAC"> Los Angeles Clippers</a></li></td></tr>
+                              <tr><td><li><a href="/IND"> Indiana Pacers</a></li></td> <td><li><a href="/PHX"> Phoenix Suns</a></li></td></tr>
+                              <tr><td><li><a href="/MIL"> Milwaukee Bucks</a></li></td> <td><li><a href="/SAC"> Sacramento Kings</a></li></td></tr>
+                              <tr style="text-align: center;"><td>Southeast Division</td> <td>Northwest Division</tr>
+                              <tr><td><li><a href="/ATL"> Atlanta Hawks</a></li></td> <td><li><a href="/DEN"> Denver Nuggets</a></li></td></tr>
+                              <tr><td><li><a href="/CHA"> Charlotte Hornets</a></li></td> <td><li><a href="/MIN"> Minnesota Timberwolves</a></li></td></tr>
+                              <tr><td><li><a href="/MIA"> Miami Heat</a></li></td> <td><li><a href="/OKC"> Oklahoma City Thunder</a></li></td></tr>
+                              <tr><td><li><a href="/ORL"> Orlando Magic</a></li></td> <td><li><a href="/POR"> Portland Trailblazers</a></li></td></tr>
+                              <tr><td><li><a href="/WAS"> Washington Wizards</a></li></td> <td><li><a href="/UTH"> Utah Jazz</a></li></td></tr>
+                            </table>
+                          </div>
+                        </div> </td>
+                  <td style="padding-left:10px; padding-right: 10px;"> <a href="http://nbaassets.wordpress.com/">Blog </a></td>
+                  <td style="padding-left:10px; padding-right: 10px;">  <a href="https://docs.google.com/spreadsheets/d/1rAVHwPmkX3Ir1uXEAuEIR0ReX3UmRJbcMZKFSE3r2nM/">Excel </a></td>
+                  <td style="padding-left:10px; padding-right: 10px;">  <a href="/about">About </a></td>
+                </tr>
+                </table>
+
+
+                  </div>
+
+              </div>
+
+      </header>
+
+      {% block content %}{% endblock %}
+
+
+
+
+
+
+    </body>
+</html>

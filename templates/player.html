@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+{% block title %}NBA Assets{% endblock %}
+{% block content %}
+<div class="container" style="margin-top:103px; margin-bottom:100px;">
+  <div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" src="/static/lebronbanner.png" width="100%" height="auto">
+      </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3" align="center" width="25%">
+
+    </div>
+<div class="col-md-6" width="50%">
+
+<table class="table-bordered" style="width:100%">
+
+  <tr>
+      <td style="width:30%"> <b>Player Name </b></td>
+      <td style="width:70%"> <b> {{ player[0].asset_name }} </b> </td>
+  </tr>
+  <tr>
+        <td style="width:30%"> Ranking </td>
+        <td style="width:70%"> {{ player[0].ranking }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Notes </td>
+          <td style="width:70%"> {{ player[0].notes }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 1 Value </td>
+          <td style="width:70%"> {{ player[0].y1 }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 1 Guaranteed </td>
+          <td style="width:70%"> {{ player[0].y1g }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 2 </td>
+          <td style="width:70%"> {{ player[0].y2 }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 2 Guaranteed </td>
+          <td style="width:70%"> {{ player[0].y2g }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 3 </td>
+          <td style="width:70%"> {{ player[0].y3 }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 3 Guaranteed </td>
+          <td style="width:70%"> {{ player[0].y3g }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 4 </td>
+          <td style="width:70%"> {{ player[0].y4 }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 4 Guaranteed </td>
+          <td style="width:70%"> {{ player[0].y4g }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 5 </td>
+          <td style="width:70%"> {{ player[0].y5 }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Year 5 Guaranteed </td>
+          <td style="width:70%"> {{ player[0].y5g }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Player Option </td>
+          <td style="width:70%"> {{ player[0].playeropt }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Team Option </td>
+          <td style="width:70%"> {{ player[0].teamopt }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Early Termination Option </td>
+          <td style="width:70%"> {{ player[0].eto }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Qualifying Offer </td>
+          <td style="width:70%"> {{ player[0].qo }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Bird Rights </td>
+          <td style="width:70%"> {{ player[0].bird }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Non-Bird Rights </td>
+          <td style="width:70%"> {{ player[0].nonbird }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Restricted Free Agent </td>
+          <td style="width:70%"> {{ player[0].rfa }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Unrestricted Free Agent</td>
+          <td style="width:70%"> {{ player[0].ufa }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Rights </td>
+          <td style="width:70%"> {{ player[0].rights }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Rights Information </td>
+          <td style="width:70%"> {{ player[0].rightsinfo }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> No Trade Clause </td>
+          <td style="width:70%"> {{ player[0].ntc }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Agent</td>
+          <td style="width:70%"> {{ player[0].agent }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Agency </td>
+          <td style="width:70%"> {{ player[0].agency }} </td>
+  </tr>
+  <tr>
+          <td style="width:30%"> Total Contract Value </td>
+          <td style="width:70%"> {{ player[0].totalvalue }} </td>
+  </tr>
+
+
+
+
+
+</table>
+</div>
+<div class="col-md-3" width="25%"></div>
+</div>
+<br><br>
+
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}NBA Assets{% endblock %}
+{% block content %}
+
+
+<div class="container" style="margin-top:103px; margin-bottom:100px; padding-bottom: 50px;">
+  <div class="row">
+    <div class="col-md-12">
+        <img class="img-responsive" src="/static/lebronbanner.png" width="100%" height="auto">
+      </div>
+  </div>
+
+    <div class="row" style = "padding-top: 50px; margin-bottom:20px">
+        <div class="col-md-12" width="100%">
+            <h2 align = "center">Assets - {{ team_name }}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" align="center" width="25%">
+        <h2>  {{ team_name }} </h2>
+          <br><br>
+          <img src="{{ url_for('static', filename='' + team_abbrev + '.gif') }}">
+        </div>
+        <div class="col-md-6" width="50%">
+          <table class="table-bordered" style="width:100%">
+            <tr>
+              <td style="width:30%"><b> Asset </b> </td>
+              <td style="width:10%"><b> Rank </b> </td>
+              <td style="width:10%"><b> Team </b> </td>
+              <td style="width:50%"><b> Notes </b> </td>
+            </tr>
+
+            {% for i in ranks %}
+            {% if ranks.index(i) % 2 == 1 %}
+              <tr bgcolor="#ead5ab">
+            {% else %}
+              <tr bgcolor="#ffffff">
+            {% endif %}
+                <td style="width:30%"> {{ i.asset_name }} </td>
+                <td style="width:10%"> {{ ranks.index(i)+1 }} </td>
+                <td style="width:10%"> {{ i.team_id }} </td>
+                <td style="width:50%"> {{ i.notes }} </td>
+              <tr>
+            {% endfor %}
+          </table>
+        </div>
+        <div class="col-md-3" width="25%"></div>
+      </div>
+
+{% endblock %}

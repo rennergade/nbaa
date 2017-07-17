@@ -1,0 +1,6 @@
+eb init --profile nbaa -p python2.7 nbaa
+eb init --profile nbaa 
+eb create --profile nbaa nbaa-env
+
+source ~/nbaa-virt/bin/activate
+deactivate
